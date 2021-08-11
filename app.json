@@ -17,16 +17,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mrloulass.js-401d42-class-41",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.mrloulass.js_401d42_class_41",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/mrloulass/js-401d42-class-41.git"
   }
 }
