@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, Image } from 'react-native';
 import { Text, Card, ListItem, Button, Icon } from 'react-native-elements';
 
 
@@ -24,16 +24,21 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Text>Travel the World</Text>
-      <Card
+      <FlatList
         data={countriesData}
         contentContainerStyle={styles.list}
         keyExtractor={item => item.name}
-        renderItem={({ item }) => <Card.Title>{item.name}</Card.Title>}>
-         <Card.Divider />
-        <Card.Image source={item.flag}>
-        <Text>{`The capital of ${item.name} is ${item.capital}`}</Text>
-        </Card.Image>
-      </Card>
+        renderItem={({ item }) => 
+        <Button onPress={()=>item.name.capital}
+          title="Solid Button"
+          title={item.name}
+          size={15}
+          color="white">
+          </Button>}>
+        {/* <Image
+          source={{uri:'https://restcountries.eu/rest/v2/region/americas?fields=flag'}} 
+          style={{ width: 40, height: 40 }}/> */}
+      </FlatList>
     </View>
   );
 }
